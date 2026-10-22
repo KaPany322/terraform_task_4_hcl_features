@@ -1,5 +1,5 @@
 output "vm_name" {
-  value = lower(azurerm_virtual_machine.main[0].name)
+  value = upper(azurerm_virtual_machine.main[0].name)
 }
 
 output "vm_tags" {
@@ -7,5 +7,5 @@ output "vm_tags" {
 }
 
 output "vm_ids" {
-  value = azurerm_virtual_machine.main[*].id
+  value = [for vm in azurerm_virtual_machine.main : vm.id]
 }
