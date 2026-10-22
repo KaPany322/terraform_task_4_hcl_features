@@ -1,5 +1,5 @@
 locals {
-  network_interfaces = ["network_interface_1", "network_interface_2"]
+  network_interface_names = ["network_interface_1", "network_interface_2"]
   security_rules = [{
     name                       = "sr1"
     priority                   = 1000
